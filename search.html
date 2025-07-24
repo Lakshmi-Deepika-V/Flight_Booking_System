@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Flight</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .bg-orange {
+      background-color: grey;
+    }
+    .bg-light-orange {
+      background-color: #6C3082;
+    }
+    .table td, .table th {
+      vertical-align: middle;
+    }
+    .upcoming-card img {
+      height: 150px;
+      object-fit: cover;
+    }
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #D8BFD8; /* Updated darker but soft lavender */
+}
+.hero-section {
+  background-image: url('flightbg.jpg'); /* 🔁 Replace with your actual image filename */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-orange text-white p-3">
+  <div class="d-flex justify-content-end">
+    <a href="#" class="btn btn-light btn-sm me-2">Log In</a>
+    <a href="#" class="btn btn-light btn-sm me-2">Create an Account</a>
+    <a href="#" class="btn btn-danger btn-sm">Book Now</a>
+  </div>
+</header>
+  
+<!-- Hero -->
+<div class="hero-section text-white text-center py-5">
+  <h1>Search Flight</h1>
+  <p>Flight &gt; Search</p>
+</div>
+
+
+<!-- Search Form -->
+<div class="container my-5 bg-light-orange p-4 rounded">
+  <form class="row g-3">
+    <div class="col-md-4">
+      <select class="form-select" aria-label="From Airport">
+        <option selected>--Select FROM Airport--</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select class="form-select" aria-label="To Airport">
+        <option selected>--Select TO Airport--</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <input type="date" class="form-control">
+    </div>
+    <div class="col-md-1">
+      <button type="submit" class="btn btn-danger w-100">Search</button>
+    </div>
+  </form>
+</div>
+
+<!-- Flight Table -->
+<div class="container mb-5">
+  <table class="table table-bordered text-center bg-white">
+    <thead class="table-dark">
+      <tr>
+        <th>Flight</th>
+        <th>From</th>
+        <th>Takeoff</th>
+        <th>To</th>
+        <th>Landing</th>
+        <th>Book</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>B019</td>
+        <td>COK</td>
+        <td>20:10</td>
+        <td>BIA</td>
+        <td>03:55</td>
+        <td><a href="book.html" class="btn btn-danger btn-sm">Book Flight</a></td>
+
+      </tr>
+       <tr>
+        <td>B019</td>
+        <td>COK</td>
+        <td>20:10</td>
+        <td>BIA</td>
+        <td>03:55</td>
+        <td><a href="book.html" class="btn btn-danger btn-sm">Book Flight</a></td>
+
+      </tr>
+       <tr>
+        <td>B019</td>
+        <td>COK</td>
+        <td>20:10</td>
+        <td>BIA</td>
+        <td>03:55</td>
+        <td><a href="book.html" class="btn btn-danger btn-sm">Book Flight</a>
+</td>
+      </tr>
+       <tr>
+        <td>B019</td>
+        <td>COK</td>
+        <td>20:10</td>
+        <td>BIA</td>
+        <td>03:55</td>
+        <td><a href="book.html" class="btn btn-danger btn-sm">Book Flight</a>
+</td>
+      </tr>
+       <tr>
+        <td>B019</td>
+        <td>COK</td>
+        <td>20:10</td>
+        <td>BIA</td>
+        <td>03:55</td>
+        <td><a href="book.html" class="btn btn-danger btn-sm">Book Flight</a>
+</td>
+      </tr>
+       <tr>
+        <td>B019</td>
+        <td>COK</td>
+        <td>20:10</td>
+        <td>BIA</td>
+        <td>03:55</td>
+        <td><a href="book.html" class="btn btn-danger btn-sm">Book Flight</a>
+</td>
+      </tr>
+       <tr>
+        <td>B019</td>
+        <td>COK</td>
+        <td>20:10</td>
+        <td>BIA</td>
+        <td>03:55</td>
+        <td><a href="book.html" class="btn btn-danger btn-sm">Book Flight</a>
+</td>
+      </tr>
+       <tr>
+        <td>B019</td>
+        <td>COK</td>
+        <td>20:10</td>
+        <td>BIA</td>
+        <td>03:55</td>
+        <td><a href="book.html" class="btn btn-danger btn-sm">Book Flight</a>
+</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Upcoming Flights -->
+<div class="container my-5">
+  <h3 class="text-center">Upcoming Flights</h3>
+
+  <div class="row mt-4">
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card upcoming-card">
+        <img src="sc1.jpg" class="card-img-top" alt="Mumbai">
+        <div class="card-body">
+          <h5>BIA → BOM</h5>
+          <p>From $138.00</p>
+          <p>07:15 AM – 09:40 AM</p>
+          <p>A Airways</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card upcoming-card">
+        <img src="sc2.jpg" class="card-img-top" alt="Mumbai">
+        <div class="card-body">
+          <h5>BIA → BOM</h5>
+          <p>From $138.00</p>
+          <p>07:15 AM – 09:40 AM</p>
+          <p>A Airways</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card upcoming-card">
+        <img src="sc3.jpg" class="card-img-top" alt="Mumbai">
+        <div class="card-body">
+          <h5>BIA → BOM</h5>
+          <p>From $138.00</p>
+          <p>07:15 AM – 09:40 AM</p>
+          <p>A Airways</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container d-flex justify-content-between">
+    <div>
+      <h6>Company</h6>
+      <ul class="list-unstyled">
+        <li><a href="#" class="text-white">About</a></li>
+        <li><a href="#" class="text-white">Booking</a></li>
+        <li><a href="#" class="text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>Legal</h6>
+      <ul class="list-unstyled">
+        <li><a href="#" class="text-white">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="text-center mt-3">
+    <p>&copy; DBMS 2021. All rights reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aircraft Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .bg-orange {
+      background-color: grey;
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card-body ul li {
+      margin-bottom: 5px;
+    }
+
+    .bg-light-orange {
+      background-color: #6C3082;
+    }
+
+    .py-5 {
+      padding-top: 3rem !important;
+      padding-bottom: 3rem !important;
+    }
+
+    /* Popup & overlay */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      padding: 20px;
+      width: 300px;
+      z-index: 10001;
+    }
+
+    .popup h3 {
+      margin-top: 0;
+    }
+
+    .popup input {
+      width: 100%;
+      margin: 8px 0;
+      padding: 8px;
+    }
+
+    .popup button {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 10000;
+    }
+    .hero-image {
+  background-image: url('flightbg.jpg'); /* 🔁 Replace with your image file */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+  <!-- Login Popup -->
+  <div class="popup" id="login-popup">
+    <h3>Log In</h3>
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button onclick="submitLogin()">Submit</button>
+  </div>
+
+  <!-- Signup Popup -->
+  <div class="popup" id="signup-popup">
+    <h3>Create Account</h3>
+    <input type="text" id="signupName" placeholder="Full Name" required>
+    <input type="email" id="signupEmail" placeholder="Email" required>
+    <input type="password" id="signupPassword" placeholder="Password" required>
+    <button onclick="submitSignup()">Register</button>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-image text-white text-center py-5">
+  <h1>Aircraft Details</h1>
+  <p>Home &gt; Aircraft Models</p>
+</div>
+
+
+  <!-- Header Section -->
+  <!-- Header Section -->
+<header class="bg-orange text-white p-3">
+  <div>
+    <a href="#" class="btn btn-light btn-sm" onclick="showPopup('login')">Log In</a>
+    <a href="#" class="btn btn-light btn-sm" onclick="showPopup('signup')">Create an Account</a>
+    <a href="search.html" target="_blank" class="btn btn-danger btn-sm">Book Now</a>
+
+  </div>
+</header>
+
+
+  <!-- Aircraft Details Section -->
+  <section class="py-5 bg-light-orange">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="c1.jpg" class="card-img-top" alt="Boeing 737 MAX 10">
+          <div class="card-body">
+            <h5 class="card-title">Aircraft 1</h5>
+            <ul>
+              <li><strong>Max Passenger Capacity:</strong> 186</li>
+              <li><strong>Fuel Capacity:</strong> 25941 L</li>
+              <li><strong>Max Load:</strong> 80340.0 Kg</li>
+              <li><strong>Avg Air Speed:</strong> 838 Kmph</li>
+              <li><strong>Manufacturer:</strong> Boeing Commercial</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="c2.jpg" class="card-img-top" alt="Boeing 757 300">
+          <div class="card-body">
+            <h5 class="card-title">Aircraft 2</h5>
+            <ul>
+              <li><strong>Max Passenger Capacity:</strong> 242</li>
+              <li><strong>Fuel Capacity:</strong> 43300 L</li>
+              <li><strong>Max Load:</strong> 123830.0 Kg</li>
+              <li><strong>Avg Air Speed:</strong> 918 Kmph</li>
+              <li><strong>Manufacturer:</strong> Boeing Commercial</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="c3.jpg" class="card-img-top" alt="Airbus A380 800">
+          <div class="card-body">
+            <h5 class="card-title">Aircraft 3</h5>
+            <ul>
+              <li><strong>Max Passenger Capacity:</strong> 568</li>
+              <li><strong>Fuel Capacity:</strong> 323546.0 L</li>
+              <li><strong>Max Load:</strong> 570000.0 Kg</li>
+              <li><strong>Avg Air Speed:</strong> 903 Kmph</li>
+              <li><strong>Manufacturer:</strong> Airbus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <h6>Company</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">About</a></li>
+          <li><a href="#" class="text-white">Booking</a></li>
+          <li><a href="#" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Legal</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <p class="mb-0">&copy; DBMS 2021. All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- Script for Popups -->
+  <script>
+    function showPopup(type) {
+      document.getElementById("overlay").style.display = "block";
+      document.getElementById(type + "-popup").style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closePopup() {
+      document.getElementById("overlay").style.display = "none";
+      document.getElementById("login-popup").style.display = "none";
+      document.getElementById("signup-popup").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    function submitLogin() {
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+      console.log("Login Email:", email);
+      console.log("Login Password:", password);
+      closePopup();
+    }
+
+    function submitSignup() {
+      const name = document.getElementById("signupName").value;
+      const email = document.getElementById("signupEmail").value;
+      const password = document.getElementById("signupPassword").value;
+      console.log("Signup Name:", name);
+      console.log("Signup Email:", email);
+      console.log("Signup Password:", password);
+      closePopup();
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
